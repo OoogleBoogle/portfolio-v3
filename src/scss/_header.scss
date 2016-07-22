@@ -1,0 +1,66 @@
+header {
+  background-color: $blue;
+  color: lighten($blue, 70%);
+  font-family: 'Raleway', sans-serif;
+  height: 100vh;
+  position: relative;
+  text-align: center;
+  width: 100%;
+
+  .head-wrapper {
+    left: 50%;
+    padding: .3em;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -60%);
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 3.5em;
+    padding-bottom: 0.5em;
+    padding-top: 1em;
+  }
+
+  p {
+    
+    font-size: 1.2em;
+    letter-spacing: 0.05em;
+    line-height: 1.3em;
+    padding: 0.5em;
+  }
+
+  ul {
+    display: none;
+
+    @media screen and (min-width: 484px) {
+      align-content: center;
+      display: flex;
+      justify-content: center;
+      margin: 0.5em auto;
+      padding: 1.5em 0;
+    }
+  }
+
+  li {
+
+    &:before {
+      content: '\00B7';
+      padding: 0 1em;
+    }
+
+    &:last-child:after {
+      content: '\00B7';
+      padding: 0 1em;
+    }
+  }
+
+  .arrow {
+    bottom: 10px;
+    left: 42%;
+    padding: 1em;
+    position: absolute;
+    right: 42%;
+  }
+}
+
