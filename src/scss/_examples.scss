@@ -1,0 +1,53 @@
+.work-examples {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  
+
+  .example {
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+
+    @media screen and (min-width: 425px) {
+      width: 50%;
+    }
+
+    @media screen and (min-width: 768px) {
+      width: 33.333333333%
+    }
+
+    &:hover {
+      img {
+        transform: scale(1.05);
+        filter: blur(2px) grayscale(75%);
+      }
+
+      p {
+        bottom: 0;
+      }
+    }
+  }
+
+  img {
+    width: 100%;
+    transform-origin: top left;
+    transition: .3s;
+  }
+
+  p {
+    background: transparentize($blue, 0.2);
+    bottom: -200px;
+    color: lighten($blue, 50%);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1em;
+    // height: 160px;
+    line-height: 1.3em;
+    letter-spacing: 0.02em;
+    padding: 0.8em 0.4em;
+    position: absolute;
+    transition: .3s;
+    width: 100%;
+  }
+}
