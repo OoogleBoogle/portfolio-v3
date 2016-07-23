@@ -93,4 +93,4 @@ gulp.task('serve', function() {
 gulp.task('dev', ['html', 'scripts', 'sass', 'images', 'watch', 'serve']);
 
 // Build task
-gulp.task('build', ['sass:prod', 'html:prod', 'scripts:prod', 'images']);
+gulp.task('build', ['sass:prod', 'html:prod', 'images']);
