@@ -20,8 +20,8 @@
 
     &:hover {
       img {
-        transform: scale(1.05);
-        filter: blur(2px) grayscale(75%);
+        transform: scale(0.98);
+        filter: blur(2px) grayscale(25%);
       }
 
       p {
@@ -32,7 +32,7 @@
 
   img {
     width: 100%;
-    transform-origin: top left;
+    transform-origin: center center;
     transition: .3s;
   }
 
