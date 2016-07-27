@@ -49,6 +49,7 @@
   p {
     background: transparentize($blue, 0.2);
     bottom: -200px;
+    box-sizing: border-box;
     color: lighten($blue, 50%);
     font-family: 'Open Sans', sans-serif;
     font-size: 1em;
@@ -56,6 +57,7 @@
     letter-spacing: 0.02em;
     padding: 0.8em 0.4em;
     position: absolute;
+    text-align: center;
     transition: .3s;
     width: 100%;
   }
