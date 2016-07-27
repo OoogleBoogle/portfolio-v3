@@ -68,6 +68,11 @@ gulp.task('images', function() {
     .pipe(gulp.dest('build/img'));
 });
 
+gulp.task('CNAME', function() {
+  return gulp.src('CNAME')
+    .pipe(gulp.dest('build'));
+})
+
 // Watch task
 gulp.task('watch', function() {
   gulp.watch('src/js/**/**/*.js', ['scripts']);
@@ -93,4 +98,7 @@ gulp.task('serve', function() {
 gulp.task('dev', ['html', 'scripts', 'sass', 'images', 'watch', 'serve']);
 
 // Build task
-gulp.task('build', ['sass:prod', 'html:prod', 'images']);
+gulp.task('build', ['sass:prod', 'html:prod', 'images', 'CNAME']);
+
+// git build push command
+// git push origin `git subtree split --prefix build gh-pages`:gh-pages --force
