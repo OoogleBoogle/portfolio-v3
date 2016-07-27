@@ -7,6 +7,11 @@ header {
   text-align: center;
   width: 100%;
 
+  a {
+    color: lighten($blue, 70%);
+    font-weight: 600;
+    text-decoration: underline;
+  }
   .head-wrapper {
     left: 50%;
     padding: .3em;

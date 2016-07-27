@@ -5,35 +5,44 @@
   
 
   .example {
+    background-size: 110%;
     box-sizing: border-box;
+    filter: blur(20%);
     overflow: hidden;
+    padding-bottom: 52.7%;
     position: relative;
     width: 100%;
+    transition: all 0.2s ease-in-out;
+    
 
     @media screen and (min-width: 425px) {
       width: 50%;
+      padding-bottom: 26.35%;
     }
 
     @media screen and (min-width: 768px) {
-      width: 33.333333333%
+      width: 33.333333333%;
+      padding-bottom: 17.5666666667%;
     }
 
     &:hover {
-      img {
-        transform: scale(0.98);
-        filter: blur(2px) grayscale(25%);
-      }
+      background-size: 105%;
+      filter: blur(20%);
 
       p {
         bottom: 0;
       }
-    }
-  }
 
-  img {
-    width: 100%;
-    transform-origin: center center;
-    transition: .3s;
+      .example-link-1 {
+        top: 0;
+        left: 0;
+      }
+
+      .example-link-2 {
+        top: 0;
+        right: 0;
+      }
+    }
   }
 
   p {
@@ -41,8 +50,7 @@
     bottom: -200px;
     color: lighten($blue, 50%);
     font-family: 'Open Sans', sans-serif;
-    font-size: 1.1em;
-    // height: 160px;
+    font-size: 1em;
     line-height: 1.3em;
     letter-spacing: 0.02em;
     padding: 0.8em 0.4em;
@@ -50,4 +58,50 @@
     transition: .3s;
     width: 100%;
   }
+}
+
+
+.example-link {
+  color: #4d6b92;
+  font-size: 2.5em;
+  padding: 0.2em;
+  position: absolute;
+  text-decoration: none;
+  top: -46px;
+  transition: all .3s ease-out;
+}
+
+.example-link-1 {
+  left: -46px;
+}
+
+.example-link-2 {
+  right: -46px;
+}
+
+.link-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.sw-portfolio {
+  background: url('../img/sw-port-sm.png') center center no-repeat;
+  
+}
+
+.twitter-cms {
+  background: url('../img/twitter_sm.jpg') center center no-repeat;
+}
+
+.game {
+  background: url('../img/gerald-sm.jpg') center center no-repeat;
+}
+
+.tic-tac {
+  background: url('../img/tic-tac-sm.jpg') center center no-repeat;
+}
+
+.benny {
+  background: url('../img/benny-sm.jpg') center center no-repeat;
 }
