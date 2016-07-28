@@ -71,6 +71,11 @@ gulp.task('images', function() {
 gulp.task('CNAME', function() {
   return gulp.src('CNAME')
     .pipe(gulp.dest('build'));
+});
+
+gulp.task('favicons', function() {
+  return gulp.src('src/favicons/*')
+    .pipe(gulp.dest('build'));
 })
 
 // Watch task
