@@ -100,10 +100,10 @@ gulp.task('serve', function() {
 
 
 // Default task
-gulp.task('dev', ['html', 'scripts', 'sass', 'images', 'watch', 'serve']);
+gulp.task('dev', ['html', 'scripts', 'sass', 'images', 'watch', 'favicons', 'serve']);
 
 // Build task
-gulp.task('build', ['sass:prod', 'html:prod', 'images', 'CNAME']);
+gulp.task('build', ['sass:prod', 'html:prod', 'images', 'favicons', 'CNAME']);
 
 // git build push command
 // git push origin `git subtree split --prefix build gh-pages`:gh-pages --force
