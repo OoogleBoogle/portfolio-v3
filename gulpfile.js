@@ -49,6 +49,7 @@ gulp.task('scripts', function() {
     .bundle()
     .pipe(source('app.js'))
     .pipe(buffer())
+    .pipe(uglify())
     .pipe(gulp.dest('build/js'));
 });
 
@@ -103,7 +104,7 @@ gulp.task('serve', function() {
 gulp.task('dev', ['html', 'scripts', 'sass', 'images', 'watch', 'favicons', 'serve']);
 
 // Build task
-gulp.task('build', ['sass:prod', 'html:prod', 'images', 'favicons', 'CNAME']);
+gulp.task('build', ['sass:prod', 'html:prod', 'images', 'scripts', 'favicons', 'CNAME']);
 
 // git build push command
 // git push origin `git subtree split --prefix build gh-pages`:gh-pages --force
