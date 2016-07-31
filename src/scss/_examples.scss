@@ -27,7 +27,8 @@
       width: 33.333333333%;
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
       background-size: 105%;
 
       p {
@@ -62,8 +63,6 @@
     width: 100%;
   }
 }
-
-
 .example-link {
   color: #4d6b92;
   font-size: 2.5em;
@@ -82,14 +81,16 @@
   right: -46px;
 }
 
-.link-overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
+.react-boiler {
 
-.blurrer {
-  margin-top: 50%;
-  visibility: hidden;
-}
+  a {
+    left: 50%;
+    transform: translateX(-50%)
+  }
 
+  &:hover > a,
+  &:focus > a {
+    top: 0;
+    left: 50%;
+  }
+}
