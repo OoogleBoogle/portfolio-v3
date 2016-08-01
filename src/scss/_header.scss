@@ -2,10 +2,22 @@ header {
   background-color: $blue;
   color: lighten($blue, 70%);
   font-family: 'Raleway', sans-serif;
-  height: 100vh;
+  height: 500px;
   position: relative;
   text-align: center;
   width: 100vw;
+
+  @media screen and (orientation: landscape) {
+    height: 400px;
+  }
+
+  @media screen and (min-width: 768px) {
+    height: 550px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    height: 100vh;
+  }
 
   a {
     color: lighten($blue, 70%);
