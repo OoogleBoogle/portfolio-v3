@@ -35,12 +35,12 @@
         bottom: 0;
       }
 
-      .example-link-1 {
+      .example-link-left {
         top: 0;
         left: 0;
       }
 
-      .example-link-2 {
+      .example-link-right {
         top: 0;
         right: 0;
       }
@@ -73,11 +73,11 @@
   transition: all .3s ease-out;
 }
 
-.example-link-1 {
+.example-link-left {
   left: -46px;
 }
 
-.example-link-2 {
+.example-link-right {
   right: -46px;
 }
 
@@ -92,5 +92,28 @@
   &:focus > a {
     top: 0;
     left: 50%;
+  }
+}
+
+.iOS-Fallback {
+  background-size: 105%;
+
+  p {
+    bottom: 0;
+  }
+
+  .example-link-center {
+    top: 0;
+    left: 50%;
+  }
+
+  .example-link-left {
+    top: 0;
+    left: 0;
+  }
+
+  .example-link-right {
+    top: 0;
+    right: 0;
   }
 }
