@@ -90,7 +90,7 @@
                 </a>
                 <p>Object Oriented JavaScript</p>
             </div>
-			<div class="example benny">
+            <div class="example benny">
                 <a class="example-link example-link-left" href="https://github.com/OoogleBoogle/BennyHillVideoConverter" target="_blank">
                     <i class="fa fa-github"></i>
                 </a>
@@ -107,16 +107,12 @@
                 <img src="img/me.png" alt="Photo of Me">
             </div>
             <p>
-                When I'm not sat behind a desk, I'm usually sat behind 
+                When I'm not sat behind a desk, I'm usually sat behind
                 <a href="http://www.epiphone.com/Products/Les-Paul/Les-Paul-Custom.aspx" target="_blank">
                     my first true love,
-                </a>
-                reminiscing over 
-                <a href="http://www.bcrich.com/mk7/mk7-warlock/" target="_blank">lost loves</a>
-                or avoiding Game of Thrones spoilers. <br /><br />I'm comfortable working on full stack applications, and have experience
-                in Node, Mongo and Express. But, I feel most at home in the browser with plain HTML, CSS and JavaScript and love
-                using libraries like React, JQuery, Bootstrap, Materialize and Foundation, as well as larger frameworks
-                lke Angular 2.
+                </a> reminiscing over
+                <a href="http://www.bcrich.com/mk7/mk7-warlock/" target="_blank">lost loves</a> or avoiding Game of Thrones spoilers. <br /><br />I'm comfortable working on full stack applications, and have experience in Node, Mongo and Express. But,
+                I feel most at home in the browser with plain HTML, CSS and JavaScript and love using libraries like React, JQuery, Bootstrap, Materialize and Foundation, as well as larger frameworks lke Angular 2.
             </p>
         </div>
         <div class="links">
@@ -142,7 +138,22 @@
             </ul>
         </div>
     </footer>
-    <script src="js/app.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+            if (iOS) {
+                var projects = document.querySelectorAll('.example');
+                for (var i = 0; i < projects.length; i++) { // iOS fallback for hover effects
+                    projects[i].addEventListener('click', function() {
+                        for (var i = 0; i < projects.length; i++) {
+                            projects[i].classList.remove('iOS-Fallback');
+                        }
+                        this.classList.add('iOS-Fallback');
+                    });
+                }
+            }
+        });
+    </script>
 </body>
 
 </html>
