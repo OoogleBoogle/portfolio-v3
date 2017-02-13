@@ -110,7 +110,7 @@ gulp.task('critical', ['build'], function (cb) {
         dest: 'index.html',
         minify: true,
         width: 320,
-        height: 736
+        height: 420
     });
 });
 
@@ -119,6 +119,8 @@ gulp.task('dev', ['html', 'sass', 'images', 'favicons', 'watch', 'serve']);
 
 // Build task
 gulp.task('build', ['sass:prod', 'html:prod', 'scripts:prod', 'images', 'favicons', 'CNAME']);
+
+gulp.task('dev:build', ['sass:prod', 'html:prod', 'scripts:prod', 'images', 'watch', 'serve']);
 
 // git build push command
 // git push origin `git subtree split --prefix build gh-pages`:gh-pages --force
