@@ -6,7 +6,7 @@ if [ $BRANCH != 'master' ]
   then
     git checkout master
     git merge $BRANCH -m "pulling in changes" --ff-only
-    git push
+    git push origin master
 fi
 
 git checkout gh-pages
