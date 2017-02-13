@@ -1,5 +1,10 @@
 #!/bin/bash
 
+BRANCH=git rev-parse --abbrev-ref HEAD
+
+git checkout master
+git merge $BRANCH -m "pulling in changes" --ff-only
+
 git checkout gh-pages
 git merge master -m "pre build merge" --ff-only
 if [ -a ./build ]
