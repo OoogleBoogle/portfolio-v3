@@ -1,6 +1,6 @@
 {
     "beautify.onSave": true,
-    "indent_size": 4,
+    "indent_size": 2,
     "indent_char": " ",
     "scss": {
         "indent_size": 2

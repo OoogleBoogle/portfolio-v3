@@ -9,7 +9,9 @@ var gulp = require('gulp'),
     source = require('vinyl-source-stream'),
     buffer = require('vinyl-buffer'),
     autoprefixer = require('gulp-autoprefixer'),
-    gls = require('gulp-live-server');
+    gls = require('gulp-live-server'),
+    gzip = require('gulp-gzip'),
+    critical = require('critical');
 
 
 // Compile Sass task
@@ -97,14 +99,26 @@ gulp.task('serve', function() {
   gulp.watch(['build/css/main.css', 'build/index.html', 'build/js/app.js'], function(file) {
     server.notify.apply(server, [file]);
   });
-})
+});
 
+// Inline critical styles
+gulp.task('critical', ['build'], function (cb) {
+    critical.generate({
+        inline: true,
+        base: 'build/',
+        src: 'index.html',
+        dest: 'index.html',
+        minify: true,
+        width: 320,
+        height: 480
+    });
+});
 
 // Default task
-gulp.task('dev', ['html', 'scripts', 'sass', 'images', 'watch', 'favicons', 'serve']);
+gulp.task('dev', ['html', 'sass', 'images', 'favicons', 'watch', 'serve']);
 
 // Build task
-gulp.task('build', ['sass:prod', 'html:prod', 'images', 'scripts', 'favicons', 'CNAME']);
+gulp.task('build', ['sass:prod', 'html:prod', 'scripts:prod', 'images', 'favicons', 'CNAME']);
 
 // git build push command
 // git push origin `git subtree split --prefix build gh-pages`:gh-pages --force
