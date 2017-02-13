@@ -2,7 +2,7 @@
 
 git checkout gh-pages
 # git merge master -m "pre build merge" --ff-only
-if [ -f ./build ]
+if [ -a ./build ]
   then
     rm -f -r ./build
     echo "build exists"
