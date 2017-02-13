@@ -3,8 +3,9 @@
 git checkout gh-pages
 git merge master -m "pre build merge" --ff-only
 if [ -f ./build ]
-  rm -f -r ./build
-  echo "build exists"
+  then
+    rm -f -r ./build
+    echo "build exists"
 fi
 # gulp critical
 # git push origin `git subtree split --prefix build gh-pages`:gh-pages --force
