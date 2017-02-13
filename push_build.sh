@@ -17,4 +17,5 @@ if [ -a ./build ]
 fi
 git merge master -m "pre build merge" --ff-only
 gulp critical
+git add -A && git commit -m "commit new build"
 git push origin `git subtree split --prefix build gh-pages`:gh-pages --force
