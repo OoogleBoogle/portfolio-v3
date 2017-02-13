@@ -13,6 +13,7 @@ git checkout gh-pages
 if [ -a ./build ]
   then
     rm -f -r ./build
+    git add -A && git commit -m "delete old build"
 fi
 git merge master -m "pre build merge" --ff-only
 gulp critical
