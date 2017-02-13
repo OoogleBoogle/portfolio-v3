@@ -110,7 +110,8 @@ gulp.task('critical', ['build'], function (cb) {
         dest: 'index.html',
         minify: true,
         width: 320,
-        height: 420
+        height: 520,
+        extract: true
     });
 });
 
