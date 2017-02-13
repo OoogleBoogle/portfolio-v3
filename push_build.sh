@@ -1,7 +1,7 @@
 #!/bin/bash
 
 git checkout gh-pages
-git merge master -m "pre build merge"
+# git merge master -m "pre build merge" --ff-only
 if [ -f ./build ]
   then
     rm -f -r ./build
