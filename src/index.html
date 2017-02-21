@@ -11,6 +11,7 @@
   <meta name="description" content="Front-End Web Developer based in San Francisco">
   <meta name="keywords" content="web,development,html,css,html5,javascript">
   <meta name="robots" content="follow,index">
+  <link rel="canonical" href="www.simonattfield.com">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
   <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
@@ -146,6 +147,27 @@
           });
         }
       }
+    });
+
+    var trackOutboundLink = function(url) {
+      ga('send', 'event', 'outbound', 'click', url, {
+        'transport': 'beacon',
+        'hitCallback': function(){document.location = url;}
+      });
+    }
+
+    var linkData = function(data) {
+      var link = data.parentNode.getAttribute('href');
+      if (link) {
+        trackOutboundLink(link);
+      }
+    }
+
+    document.getElementsByClassName('work-examples')[0].addEventListener('click', function(e) {
+      linkData(e.target);
+    });
+    document.getElementsByClassName('links')[0].addEventListener('click', function(e) {
+      linkData(e.target);
     });
   </script>
   <script>
