@@ -21,7 +21,7 @@ gulp.task('sass', function() {
     .pipe(autoprefixer({
         browsers: ['> 2%']
     }))
-    .pipe(gulp.dest('build/css'));
+    .pipe(gulp.dest('docs/css'));
 });
 
 gulp.task('sass:prod', function() {
@@ -30,19 +30,19 @@ gulp.task('sass:prod', function() {
     .pipe(autoprefixer({
         browsers: ['> 2%']
     }))
-    .pipe(gulp.dest('build/css'));
+    .pipe(gulp.dest('docs/css'));
 })
 
 gulp.task('html', function() {
   return gulp.src('src/index.html')
-    .pipe(gulp.dest('build/'));
+    .pipe(gulp.dest('docs/'));
 });
 
 // Minify index
 gulp.task('html:prod', function() {
   return gulp.src('src/index.html')
     .pipe(minifyHTML())
-    .pipe(gulp.dest('build/'));
+    .pipe(gulp.dest('docs/'));
 });
 
 // JavaScript build task, removes whitespace and concatenates all files
@@ -52,7 +52,7 @@ gulp.task('scripts', function() {
     .pipe(source('app.js'))
     .pipe(buffer())
     .pipe(uglify())
-    .pipe(gulp.dest('build/js'));
+    .pipe(gulp.dest('docs/js'));
 });
 
 gulp.task('scripts:prod', function() {
@@ -61,24 +61,24 @@ gulp.task('scripts:prod', function() {
     .pipe(source('app.js'))
     .pipe(buffer())
     .pipe(uglify())
-    .pipe(gulp.dest('build/js'));
+    .pipe(gulp.dest('docs/js'));
 });
 
 // Image optimization task
 gulp.task('images', function() {
   return gulp.src('src/img/*')
     .pipe(imagemin())
-    .pipe(gulp.dest('build/img'));
+    .pipe(gulp.dest('docs/img'));
 });
 
 gulp.task('CNAME', function() {
   return gulp.src('CNAME')
-    .pipe(gulp.dest('build'));
+    .pipe(gulp.dest('docs'));
 });
 
 gulp.task('favicons', function() {
   return gulp.src('src/favicons/*')
-    .pipe(gulp.dest('build'));
+    .pipe(gulp.dest('docs'));
 })
 
 // Watch task
@@ -91,7 +91,7 @@ gulp.task('watch', function() {
 
 // start server
 gulp.task('serve', function() {
-  var server = gls.static('build', 3000);
+  var server = gls.static('docs', 3000);
   server.start().then(function(result) {
     process.exit(result.code);
   });
@@ -105,7 +105,7 @@ gulp.task('serve', function() {
 gulp.task('critical', ['build'], function (cb) {
     critical.generate({
         inline: true,
-        base: 'build/',
+        base: 'docs/',
         src: 'index.html',
         dest: 'index.html',
         minify: true,
