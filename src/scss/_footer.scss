@@ -38,10 +38,10 @@ footer {
         font-size: 1.3em
       }
 
-  a {
-      font-weight: 600;
-      text-decoration: underline;
-      color: lighten($blue, 55%);
+    a {
+        font-weight: 600;
+        text-decoration: underline;
+        color: lighten($blue, 55%);
     }
   }
 }
@@ -108,5 +108,5 @@ footer {
       padding: 0 0.5em;
       vertical-align: middle;
     }
-  } 
+  }
 }

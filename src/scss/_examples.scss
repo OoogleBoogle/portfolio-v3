@@ -2,7 +2,6 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  
 
   .example {
     background-size: 110%;
@@ -11,9 +10,8 @@
     overflow: hidden;
     padding-bottom: 52.7%;
     position: relative;
+    transition: background-size .2s ease-in-out;
     width: 100%;
-    transition: all 0.2s ease-in-out;
-    
 
     @media screen and (min-width: 425px) {
       min-height: 27vw;
@@ -34,85 +32,40 @@
       p {
         bottom: 0;
       }
-
-      .example-link-left {
-        top: 0;
-        left: 0;
-      }
-
-      .example-link-right {
-        top: 0;
-        right: 0;
-      }
     }
   }
 
-  p {
-    background: transparentize($blue, 0.2);
-    bottom: -200px;
-    box-sizing: border-box;
-    color: lighten($blue, 50%);
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1em;
-    line-height: 1.3em;
-    letter-spacing: 0.02em;
-    padding: 0.8em 0.4em;
-    position: absolute;
-    text-align: center;
-    transition: .3s;
-    width: 100%;
-  }
-}
-.example-link {
-  color: #4d6b92;
-  font-size: 2.5em;
-  padding: 0.2em;
-  position: absolute;
-  text-decoration: none;
-  top: -46px;
-  transition: all .3s ease-out;
-}
+//   p {
+//     background: transparentize($blue, 0.2);
+//     bottom: -200px;
+//     box-sizing: border-box;
+//     color: lighten($blue, 50%);
+//     font-family: 'Open Sans', sans-serif;
+//     font-size: 1em;
+//     line-height: 1.3em;
+//     letter-spacing: 0.02em;
+//     padding: 0.8em 0.4em;
+//     position: absolute;
+//     text-align: center;
+//     transition: .3s;
+//     width: 100%;
+//   }
+// }
 
-.example-link-left {
-  left: -46px;
-}
+  // .example-link {
+  //   color: #4d6b92;
+  //   font-size: 2.5em;
+  //   padding: 0.2em;
+  //   position: absolute;
+  //   text-decoration: none;
+  //   top: -46px;
+  //   transition: all .3s ease-out;
+  // }
 
-.example-link-right {
-  right: -46px;
-}
-
-.react-boiler {
-  a {
-    left: 50%;
-    transform: translateX(-50%)
-  }
-
-  &:hover > a,
-  &:focus > a {
-    top: 0;
-    left: 50%;
-  }
-}
-
-.iOS-Fallback {
-  background-size: 105%;
-
-  p {
-    bottom: 0;
-  }
-
-  .example-link-center {
-    top: 0;
-    left: 50%;
-  }
-
-  .example-link-left {
-    top: 0;
-    left: 0;
-  }
-
-  .example-link-right {
-    top: 0;
-    right: 0;
-  }
+//   &:hover > a,
+//   &:focus > a {
+//     top: 0;
+//     left: 50%;
+//   }
+// }
 }

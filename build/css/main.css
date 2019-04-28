@@ -127,8 +127,8 @@ header {
     overflow: hidden;
     padding-bottom: 52.7%;
     position: relative;
-    width: 100%;
-    transition: all 0.2s ease-in-out; }
+    transition: background-size .2s ease-in-out;
+    width: 100%; }
     @media screen and (min-width: 425px) {
       .work-examples .example {
         min-height: 27vw;
@@ -143,64 +143,6 @@ header {
       background-size: 105%; }
       .work-examples .example:hover p, .work-examples .example:focus p {
         bottom: 0; }
-      .work-examples .example:hover .example-link-left, .work-examples .example:focus .example-link-left {
-        top: 0;
-        left: 0; }
-      .work-examples .example:hover .example-link-right, .work-examples .example:focus .example-link-right {
-        top: 0;
-        right: 0; }
-  .work-examples p {
-    background: rgba(45, 64, 89, 0.8);
-    bottom: -200px;
-    box-sizing: border-box;
-    color: #afc0d6;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1em;
-    line-height: 1.3em;
-    letter-spacing: 0.02em;
-    padding: 0.8em 0.4em;
-    position: absolute;
-    text-align: center;
-    transition: .3s;
-    width: 100%; }
-
-.example-link {
-  color: #4d6b92;
-  font-size: 2.5em;
-  padding: 0.2em;
-  position: absolute;
-  text-decoration: none;
-  top: -46px;
-  transition: all .3s ease-out; }
-
-.example-link-left {
-  left: -46px; }
-
-.example-link-right {
-  right: -46px; }
-
-.react-boiler a {
-  left: 50%;
-  transform: translateX(-50%); }
-
-.react-boiler:hover > a,
-.react-boiler:focus > a {
-  top: 0;
-  left: 50%; }
-
-.iOS-Fallback {
-  background-size: 105%; }
-  .iOS-Fallback p {
-    bottom: 0; }
-  .iOS-Fallback .example-link-center {
-    top: 0;
-    left: 50%; }
-  .iOS-Fallback .example-link-left {
-    top: 0;
-    left: 0; }
-  .iOS-Fallback .example-link-right {
-    top: 0;
-    right: 0; }
 
 .sw-portfolio {
   background: url("../img/sw-port-sm.png") center center no-repeat; }
